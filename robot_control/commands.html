@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Micropython Robot Control - v.1.0</title>
+    <style>
+        .title {text-align: center; border: solid 2px red}
+        table {width: 100%}
+        table > tr, table > tr > td {height: 150px}
+        button, img {width: 150px; height: 150px}
+        button {padding: 0;}
+    </style>
+    <script language="javascript">
+        function sendCommand(value) {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", "COMMAND=" + value);
+            xmlhttp.send()
+        }
+    </script>
+</head>
+<body>
+<div style="width:460px">
+    <div class="title">
+        <h2>Micropython Robot Control - v.1.0</h2>
+    </div>
+    <div>
+    <table>
+        <tr>
+            <td> </td>
+            <td><button onclick="sendCommand('FORWARD')" type="submit"><img src="/img/arrow-up.png"></button></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td><button onclick="sendCommand('LEFT')" type="submit"><img src="/img/arrow-up.png" style="transform: rotate(-90deg);"></button></td>
+            <td><button onclick="sendCommand('STOP')" type="submit"><img src="/img/stop2.png"></button></td>
+            <td><button onclick="sendCommand('RIGHT')" type="submit"><img src="/img/arrow-up.png" style="transform: rotate(90deg);"></button></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td><button onclick="sendCommand('BACKWARD')" type="submit"><img src="/img/arrow-up.png" style="transform: rotate(-180deg);"></button></td>
+            <td> </td>
+        </tr>
+    </table>
+    </div>
+</div>
+</body>
+</html>
