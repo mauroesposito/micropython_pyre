@@ -62,11 +62,6 @@ def reset_motors():
 # init:
 reset_motors()
 
-
-
-# addr = socket.getaddrinfo('0.0.0.0', 80)[0][-1]
-# s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # TODO: what?
-
 s = socket.socket()
 s.bind(('', 80))
 s.listen(5)
